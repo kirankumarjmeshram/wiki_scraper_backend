@@ -70,6 +70,11 @@ def get_all_data_reverse():
             return jsonify({"message": "No data found in the collection."})
     except Exception as e:
         return jsonify({"error": str(e)})
+    
+@app.route("/")
+def hello_world():
+    mongo.db.flaskdb.insert_one({"b":"Hello World"})
+    return "<p>Wiki Scraper API</p>"
 
 # if __name__ == '__main__':
 #     app.run(debug=True, port=5002)
