@@ -9,7 +9,8 @@ from bson import ObjectId
 
 load_dotenv()
 
-mongoURI = os.getenv("URI")
+# mongoURI = os.getenv("URI")
+mongoURI = "mongodb+srv://kiran123:kiran123@cluster0.7nxcr9a.mongodb.net/flaskdb?retryWrites=true&w=majority"
 
 app = Flask(__name__)
 CORS(app)
